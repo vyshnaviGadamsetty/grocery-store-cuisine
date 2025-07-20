@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/fdc7a295f2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+            .top{
+                background-color: black;
+                height:100px;
+                width: 1513px;
+            }
+            .navbar{
+                background-color: #ff9b82;
+                height: 110px;
+                width: 101%;
+                margin-left: -8px;
+                display: flex;
+                box-shadow: 0px 5px 50px rgb(115, 115, 115);
+                margin-top: -8px;
+            }
+            .container {
+                padding: 2rem;
+                margin-top: 50px;
+            }
+            .s-r {
+                position: relative;
+                max-width: 48rem;
+                margin: 0 auto;
+            }
+            .slider {
+                display: flex;
+                aspect-ratio: 16 / 9;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+                border-radius: 0.5rem;
+                white-space: nowrap;
+                scrollbar-width: none; 
+                -ms-overflow-style: none; 
+            }
+            .slider::-webkit-scrollbar {
+                display: none; 
+            }
+            .slider img {
+                scroll-snap-align: start;
+                object-fit: cover;
+            }
+            .s-nav {
+                display: flex;
+                column-gap: 1rem;
+                position: absolute;
+                bottom: 1.25rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+            }
+            .s-nav a {
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                background-color: #fff;
+                opacity: 0.75; 
+                transition: opacity ease 250ms;
+            }
+            .s-nav a:hover {
+                opacity: 1;
+            }
+            .text{
+                font-family: "Lora", serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                font-size: 92px;
+                margin-left: 70px;
+                margin-top:50px;
+                margin-right: 20px;
+            }
+            .both{
+                display: flex;
+            }
+            #search{
+                height: 40px;
+                width: 400px;
+                margin-top: 30px;
+                margin-left: 10px;
+                border: 0px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            #search::placeholder{
+                font-size: 25px;
+                position: relative;
+                top: 5px;
+                padding-left:10px;
+            }
+            input[type="text"] {
+                border-radius: 10px;
+                padding: 5px; 
+            }
+            .navb{
+                position: absolute;
+                right: 3px;
+                margin-right: 30px;
+                display: flex;
+            }
+            .navb i {
+                margin: 0 10px;
+                color: #000000;
+                font-size: 30px;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 20px;
+                padding: 20px;
+            }
+            .navb button{
+                cursor: pointer;
+                background-color: transparent;
+                height: 50px;
+                width: 100px;
+                font-size: 1.5em;
+                border-color: none;
+                border: 0px;
+            }
+            .nava button{
+                cursor: pointer;
+                background-color: transparent;
+                margin-left: -10px;
+                font-size: 1.5em;
+                border-color: none;
+                border: 0px;
+
+            }
+            .dropdown {
+                position: relative;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #00000091;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                color: white;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #908f8f;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+                opacity: 1;
+            }
+        </style>
+        <style>
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 1,
+              'wght' 700,
+              'GRAD' 200,
+              'opsz' 40
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="nava">
+                <input type="text" id="search" placeholder="Search.....">
+                <button><i class="fa-solid fa-magnifying-glass" style="color: #000000;font-size: x-large;margin-left:-40px; position: relative; top: 5px;"></i></button>
+            </div>
+            <div class="navb">
+                <a href="home.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+                <a><i class="fa-solid fa-bell" style="color: #000000;"></i></a>
+                <a href="cart.php"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+                <a href="catagories.html"><div style="margin-top: -2px;"><i class="material-symbols-outlined">grid_view</i></div></a>
+            </div>
+        </div>
+        <div class="both">
+            <div class="text">
+                FRESH GROCERIES AT YOUR DOORSTEPS
+            </div>
+            <section class="container">
+                <div class="s-r">
+                    <div class="slider" id="slider">
+                        <img id="s1" src="images/add1.png" >
+                        <img id="s2" src="images/add4.png" >
+                        <img id="s3" src="images/add3.png" >
+                        <img id="s4" src="images/add5.png" >
+                        <img id="s5" src="images/add6.png" >
+                    </div>
+                    <div class="s-nav">
+                        <a href="#s1"></a>
+                        <a href="#s2"></a>
+                        <a href="#s3"></a>
+                        <a href="#s4"></a>
+                        <a href="#s5"></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const slider = document.getElementById('slider');
+                let currentIndex = 0;
+
+                const slide = () => {
+                    currentIndex = (currentIndex + 1) % slider.children.length;
+                    slider.scrollTo({
+                        left: slider.children[currentIndex].offsetLeft,
+                        behavior: 'smooth'
+                    });
+                };
+
+                setInterval(slide, 3000);
+            });
+        </script>
+    </body>
+</html>

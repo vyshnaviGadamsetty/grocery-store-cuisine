@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Drinks Purchase</title>
+    <script src="https://kit.fontawesome.com/fdc7a295f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .orange {
+            background-color: rgb(223,170,170);
+            width: 100%;
+            height: 100px;
+            font-size: 50px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0; 
+            left: 0; 
+            z-index: 999;
+        }
+        .orange img {
+            height: 100%;
+        }
+        .orange-text {
+            position: absolute;
+            top: 25px;
+            left: 11.5%;
+            transform: translateX(-50%);
+        }
+        .fruit-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        .fruit{
+            width: calc(20% - 20px);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+        }
+        .fruit:hover{
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.438); 
+        }
+        .fruit img{
+            max-width: 100%;
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+        .price {
+            margin-top: 5px;
+            color: #888;
+        }
+
+        button {
+            background-color:rgb(204,138,138);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(178,126,126) ;
+        }
+        .navb{
+            display: flex;
+            padding-right: 30px;
+        }
+        .navb i {
+            margin: 0 10px;
+            color: #000000;
+            font-size: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .navb button{
+            cursor: pointer;
+            background-color: transparent;
+            height: 50px;
+            width: 100px;
+            font-size: 1.5em;
+            border-color: none;
+            border: 0px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 700,
+            'GRAD' 200,
+            'opsz' 40
+        }
+    </style>
+    <!-- <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .orange {
+            height: 12%;
+            width: 100%;
+            background-color: rgb(223,170,170);
+            display: flex;
+            box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+            position: relative;
+        }
+
+        .orange img {
+            height: 100px;
+            width: 100px;
+            Margin-right:2px;
+            display:inline-block ;
+        }
+
+        .orange-text {
+            
+            font-size: 50px;
+         
+        }
+
+        .fruit-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .fruit{
+            width: calc(20% - 20px);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+        }
+
+        .fruit img {
+            max-width: 100%;
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+        .first:hover{
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.303);
+        }
+
+        .fruit-name {
+            font-weight: bold;
+        }
+
+        .price {
+            margin-top: 5px;
+            color: #888;
+        }
+
+        button {
+            background-color:rgb(204,138,138);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: rgb(178,126,126) ;
+
+        }
+    </style> -->
+</head>
+<body>
+    <div class="orange">
+        <img src="images/drink.png">
+        <span class="orange-text">Drinks</span>
+        <div class="navb">
+            <a href="home.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+            <a href="#"><i class="fa-solid fa-bell" style="color: #000000;"></i></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+            <a href="catagories.html"><div style="margin-top: 0px;margin-left: 13px;"><i class="material-symbols-outlined">grid_view</i></div></a>
+        </div>
+    </div>
+
+    <div class="fruit-container">
+        <div class="fruit">
+            <img src="images/thumsup.jpg" alt="Thumsup">
+            <div class="fruit-name">Thumsup</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="fruit">
+            <img src="images/fanta.jpg" alt="Fanta">
+            <div class="fruit-name">Fanta</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="fruit">
+            <img src="images/sprite.jpg" alt="Sprite">
+            <div class="fruit-name">Sprite</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="fruit">
+            <img src="images/limca.jpg" alt="Limca">
+            <div class="fruit-name">Limca</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="fruit">
+            <img src="images/maaza.jpg" alt="Maaza">
+            <div class="fruit-name">Maaza</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+ <div class="fruit">
+            <img src="images/cococola.jpg" alt="Coco-Cola">
+            <div class="fruit-name">Coco-Cola</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+ <div class="fruit">
+            <img src="images/minutemaid.jpg" alt="Minutemaid">
+            <div class="fruit-name">Minutemaid</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+<div class="fruit">
+            <img src="images/sting.jpg" alt="Sting">
+            <div class="fruit-name">Sting</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+<div class="fruit">
+            <img src="images/artos.jpg" alt="Artos">
+            <div class="fruit-name">Artos</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+<div class="fruit">
+            <img src="images/mirinda.jpg" alt="Mirinda">
+            <div class="fruit-name">Mirinda</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+<div class="fruit">
+            <img src="images/redbull.jpg" alt="Red Bull">
+            <div class="fruit-name">Red Bull</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+<div class="fruit">
+            <img src="images/mon.png" alt="Monster">
+            <div class="fruit-name">Monster</div>
+            <div class="price">₨.200 per kg</div>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+</body>
+</html>

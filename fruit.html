@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Purchase</title>
+    <script src="https://kit.fontawesome.com/fdc7a295f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .orange {
+            background-color: rgb(140, 217, 125);
+            width: 100%;
+            height: 100px;
+            font-size: 50px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0; 
+            left: 0; 
+            z-index: 999;
+        }
+        .orange img {
+            height: 100%;
+        }
+        .orange-text {
+            position: absolute;
+            top: 25px;
+            left: 11.5%;
+            transform: translateX(-50%);
+        }
+        .fruit-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        .fruit{
+            width: calc(20% - 20px);
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+        }
+        .fruit:hover{
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.438); 
+        }
+        .fruit img{
+            max-width: 100%;
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+        .price {
+            margin-top: 5px;
+            color: #888;
+        }
+
+        button {
+            background-color: rgb(93,196,79);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: rgb(21,168,50);
+        }
+        .fruit-container .fruit input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            font-size: 14px;
+            border: unset;
+            margin-left: 38px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 700,
+            'GRAD' 200,
+            'opsz' 40
+        }
+        .navb{
+            display: flex;
+            padding-right: 30px;
+        }
+        .navb i {
+            margin: 0 10px;
+            color: #000000;
+            font-size: 30px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .navb button{
+            cursor: pointer;
+            background-color: transparent;
+            height: 50px;
+            width: 100px;
+            font-size: 1.5em;
+            border-color: none;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="orange">
+        <img src="images/f.PNG">
+        <span class="orange-text">Fruits</span>
+        <div class="navb">
+            <a href="home.html"><i class="fa-solid fa-house" style="color: #000000;"></i></a>
+            <a href="#"><i class="fa-solid fa-bell" style="color: #000000;"></i></a>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
+            <a href="catagories.html"><div style="margin-top: 0px;margin-left: 13px;"><i class="material-symbols-outlined">grid_view</i></div></a>
+        </div>
+    </div>
+
+    <div class="fruit-container">
+        <div class="fruit">
+            <img src="images/apple.jpg" alt="Apple">
+            <div class="fruit-name">Apple</div>
+            <div class="price">₨. 479 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Apple">
+                <input type="hidden" name="fruit_image" value="images/apple.jpg">
+                <input type="hidden" name="price" value="479">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+
+        <div class="fruit">
+            <img src="images/banana.jpg" alt="Banana">
+            <div class="fruit-name">Banana</div>
+            <div class="price">₨.99 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Banana">
+                <input type="hidden" name="fruit_image" value="images/banana.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="99">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+
+        <div class="fruit">
+            <img src="images/orange.jpg" alt="Orange">
+            <div class="fruit-name">Orange</div>
+            <div class="price">₨.379 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Orange">
+                <input type="hidden" name="fruit_image" value="images/orange.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="379">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+
+        <div class="fruit">
+            <img src="images/mango.jpg" alt="Mango">
+            <div class="fruit-name">Mango</div>
+            <div class="price">₨.145 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Mango">
+                <input type="hidden" name="fruit_image" value="images/mango.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="145">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+
+        <div class="fruit">
+            <img src="images/Pomegranate.jpg" alt="Pomegranate">
+            <div class="fruit-name">Pomegranate</div>
+            <div class="price">₨.199 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Pomegranate">
+                <input type="hidden" name="fruit_image" value="images/Pomegranate.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="199">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/grapes.jpg" alt="Grapes">
+            <div class="fruit-name">Grapes</div>
+            <div class="price">₨.249 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Grapes">
+                <input type="hidden" name="fruit_image" value="images/grapes.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="249">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/papaya.jpg" alt="Papaya">
+            <div class="fruit-name">Papaya</div>
+            <div class="price">₨.99 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Papaya">
+                <input type="hidden" name="fruit_image" value="images/papaya.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="99">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/straw.jpg" alt="Strawberry">
+            <div class="fruit-name">Strawberry</div>
+            <div class="price">₨.499 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Pomegranate">
+                <input type="hidden" name="fruit_image" value="images/straw.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="499">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/watermelon.jpg" alt="Watermelon">
+            <div class="fruit-name">Watermelon</div>
+            <div class="price">₨.99 per 3 kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Watermelon">
+                <input type="hidden" name="fruit_image" value="images/watermelon.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="99">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/kiwi.jpg" alt="Kiwi">
+            <div class="fruit-name">Kiwi</div>
+            <div class="price">₨.399 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Kiwi">
+                <input type="hidden" name="fruit_image" value="images/kiwi.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="399">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/lychee.jpg" alt="Lychee">
+            <div class="fruit-name">Lychee</div>
+            <div class="price">₨.449 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Lychee">
+                <input type="hidden" name="fruit_image" value="images/lychee.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="449">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+        <div class="fruit">
+            <img src="images/musk.jpg" alt="Muskmelon">
+            <div class="fruit-name">Muskmelon</div>
+            <div class="price">₨.69 per kg</div>
+            <form action="selected_fruit.php" method="post">
+                <input type="hidden" name="fruit_name" value="Muskmelon">
+                <input type="hidden" name="fruit_image" value="images/musk.jpg">
+                <label>Quantity <br></label> <input type='number' name='quantity' value='1' min='1'> <br>
+                <input type="hidden" name="price" value="69">
+                <button type="submit" onclick="added()">Add to Cart</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function added(){
+            alert("Added to cart");
+        }
+    </script>
+</body>
+</html>
